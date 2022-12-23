@@ -149,7 +149,7 @@ def test_show_my_pets():
     time.sleep(2)
 
     # pytest.driver.implicitly_wait(3)
-    # buttons = pytest.driver.find_elements(By.CLASS_NAME, "btn")
+
     images = pytest.driver.find_elements(By.XPATH, '//*[@id="all_my_pets"]/table/tbody/tr[i]/th/img')
     names = pytest.driver.find_elements(By.XPATH, '//*[@id="all_my_pets"]/table/tbody/tr[i]/td[1]')
     breed = pytest.driver.find_elements(By.XPATH, '//*[@id="all_my_pets"]/table/tbody/tr[i]/td[2]')
@@ -160,9 +160,5 @@ def test_show_my_pets():
         assert names[i].text != ''
         assert breed[i].text != ''
         assert ages[i].ini != ''
-        # assert ', ' in breed[i]
-        # parts = breed[i].text.split(", ")
-        # assert len(parts[0]) > 0
-        # assert len(parts[1]) > 0
 
 
